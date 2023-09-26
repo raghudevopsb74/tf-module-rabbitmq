@@ -38,8 +38,8 @@ resource "aws_instance" "main" {
   user_data              = file("${path.module}/userdata.sh")
 
   root_block_device {
-    encrypted   = true
-    kms_key_id  = var.kms_key_id
+    encrypted  = true
+    kms_key_id = var.kms_key_id
   }
 }
 
